@@ -1,0 +1,107 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 860px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form section {
+    margin-bottom: 30px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+input, select, textarea {
+    padding: 8px 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+button {
+    background-color: #007acc;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+.rutFeedback {
+    font-size: 0.9em;
+    margin-top: 4px;
+}
+
+.input-valido {
+    border: 2px solid green;
+}
+
+.input-invalido {
+    border: 2px solid red;
+}
+
+/* Organización visual con grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+/* Estilo para checkbox en línea */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox-group label {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+}
