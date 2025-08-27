@@ -15,7 +15,7 @@
         Todos los campos son obligatorios.
     </p>
     <form id="formPrematricula">
-
+        <div class="form-grid">
         <label for="curso">Selecciona un curso a prematricular:<span class="required">*</span></label>
         <select name="cursoMatricula" id="curso" required>
             <option value="" selected disabled>Seleccione un curso...</option>
@@ -34,7 +34,7 @@
             <option value="3° Medio">3° Medio</option>
             <option value="4° Medio">4° Medio</option>
         </select>
-
+        </div>
         <!-- 1. Datos del Alumno -->
         <section>
             <h2>1. Datos del Alumno</h2>
@@ -52,8 +52,8 @@
                     <option value="F">Femenino</option>
                 </select>
             </label>
-            <label>Nacionalidad:<span class="required">*</span> <select name="nacionalidad" onchange="mostrarNac(this)" required>
-                <option value="" selected disabled>Seleccione nacionalidad...</option>
+            <label for="nacionalidad">Nacionalidad:<span class="required">*</span> <select name="nacionalidad" onchange="mostrarNac(this)" required>
+                <option value="" selected id="nacionalidad" name="nacionalidad" disabled>Seleccione nacionalidad...</option>
                 <option value="Chileno/a">Chileno/a</option>
                 <option value="Argentino/a">Argentino/a</option>
                 <option value="Boliviano/a">Boliviano/a</option>
@@ -69,11 +69,13 @@
                 <option value="Haitiano/a">Haitiano/a</option>
                 <option value="Otro">Otra(especificar)</option>
             </select>
-                <div id="otraNacionalidadContainer" style="display: none;">
-                    <input type="text" id="otraNacionalidad" name="otra_nacionalidad" placeholder="Ingrese su nacionalidad">
+                <div id="otraNacionalidadContainer" style="display: none; margin-top: 10px;">
+                    <label for="otraNacionalidad"> Especifique nacionalidad</label>
+                    <input type="text" id="otraNacionalidad" name="otraNacionalidad" placeholder="Ingrese su nacionalidad">
                 </div>
             </label>
-            <label>Domicilio (calle o avenida):<span class="required">*</span> <input type="text" name="domicilio" required></label>
+            <label>Dirección:<span class="required">*</span> <input type="text" name="domicilio" required></label>
+            <label>Calle o Avenida:<span class="required">*</span> <input type="text" name="calle" required></label>
             <label>Comuna:<span class="required">*</span> <select name="comuna" required>
                 <option value="" selected disabled>Seleccione una Comuna...</option>
                 <option value="Codegua">Codegua</option>
@@ -110,16 +112,24 @@
                 <option value="San Fernando">San Fernando</option>
                 <option value="Santa Cruz">Santa Cruz</option>
             </select></label>
-            <label>Región:<span class="required">*</span> <input type="text" name="region" required></label>
+            <label>Región:<span class="required">*</span> <input type="text" name="region" value="Libertador Bernardo O'Higgins" disabled></label>
             <label>Vive con:<span class="required">*</span> <input type="text" name="viveCon" required></label>
             <label>¿Pertenece a algún programa social?:<span class="required">*</span> <input type="text" name="programaSocial"></label>
             <label>¿Pertenece a alguna etnia?:<span class="required">*</span> <input type="text" name="etnia"></label>
             <label>¿Ha repetido algún curso?:<span class="required">*</span> <input type="text" name="repeticion"></label>
             <label>¿Opta a clase de religión?:<span class="required">*</span> <input type="text" name="religion"></label>
             <label>Colegio de procedencia:<span class="required">*</span> <input type="text" name="colegioProcedencia"></label>
-            <label>Alumno con SAE:<span class="required">*</span> <input type="checkbox" name="conSAE"></label>
-            <label>Alumno sin SAE:<span class="required">*</span> <input type="checkbox" name="sinSAE"></label>
-            <label>Antiguo en el colegio:<span class="required">*</span> <input type="checkbox" name="alumnoAntiguo"></label>
+            <fieldset>
+                <legend>Alumno cuenta con:<span class="required">*</span> </legend>
+                <div class="radio-group">
+                    <label><input type="radio" name="tipoAlumno" value="con SAE" required>Con SAE</label>
+                    <label><input type="radio" name="tipoAlumno" value="sin SAE" required>Sin SAE </label>
+                    <label><input type="radio" name="tipoAlumno" value="Alumno Antiguo">Alumno Antiguo </label>
+                </div>
+            </fieldset>
+<!--            <label>Alumno con SAE:<span class="required">*</span> <input type="checkbox" name="conSAE"></label>-->
+<!--            <label>Alumno sin SAE:<span class="required">*</span> <input type="checkbox" name="sinSAE"></label>-->
+<!--            <label>Antiguo en el colegio:<span class="required">*</span> <input type="checkbox" name="alumnoAntiguo"></label>-->
             </div>
         </section>
 

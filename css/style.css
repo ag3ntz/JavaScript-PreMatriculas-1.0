@@ -13,6 +13,10 @@ body {
     line-height: 1.5;
 }
 
+#otraNacionalidadContainer {
+    margin-top: 10px;
+}
+
 .intro {
     text-align: center;
     color: #555;
@@ -139,6 +143,7 @@ button:hover {
 }
 
 /* Estilo para checkbox en línea */
+
 .checkbox-group {
     display: flex;
     flex-wrap: wrap;
@@ -152,6 +157,22 @@ button:hover {
     align-items: center;
     gap: 8px;
 }
+
+
+/* Estilo para checkbox en línea */
+.radio-group {
+    display: flex;
+    gap: 60px;           /* separación entre opciones */
+    margin-top: 8px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+}
+
 
 @media screen and (max-width: 600px) {
     .container {

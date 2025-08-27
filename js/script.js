@@ -57,3 +57,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const selectNacionalidad = document.getElementById("nacionalidad");
+    const otraNacContainer = document.getElementById("otraNacionalidadContainer");
+    const otraNacInput = document.getElementById("otraNacionalidad");
+
+    selectNacionalidad.addEventListener("change", () => {
+        if (selectNacionalidad.value === "Otro") {
+            otraNacContainer.style.display = "block";
+            otraNacInput.required = true; // lo hacemos obligatorio si elige "otro"
+        } else {
+            otraNacContainer.style.display = "none";
+            otraNacInput.required = false; // no obligatorio en los demás casos
+            otraNacInput.value = ""; // limpiar si cambia de opinión
+        }
+    });
+});
