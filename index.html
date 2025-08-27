@@ -9,10 +9,15 @@
 <body>
 <main class="container">
     <h1>Ficha de Pre Matrícula - Año 2026</h1>
+    <h3>Liceo San José del Carmen</h3>
+    <p class="intro">
+        Completa este formulario para iniciar el proceso de pre-matrícula.
+        Todos los campos son obligatorios.
+    </p>
     <form id="formPrematricula">
 
-        <label>Selecciona un curso a prematricular:</label>
-        <select name="cursoMatricula" required>
+        <label for="curso">Selecciona un curso a prematricular:<span class="required">*</span></label>
+        <select name="cursoMatricula" id="curso" required>
             <option value="" selected disabled>Seleccione un curso...</option>
             <option value="Pre-Kinder">PreKinder</option>
             <option value="Kinder">Kinder</option>
@@ -29,24 +34,25 @@
             <option value="3° Medio">3° Medio</option>
             <option value="4° Medio">4° Medio</option>
         </select>
+
         <!-- 1. Datos del Alumno -->
         <section>
-            <div class="form-grid">
             <h2>1. Datos del Alumno</h2>
-            <label>Nombres: <input type="text" name="nombres" id="nombres" required></label>
-            <label>Apellido Paterno: <input type="text" name="apellidoPaterno" id="apellidoPaterno" required></label>
-            <label>Apellido Materno: <input type="text" name="apellidoMaterno" id="apellidoMaterno" required></label>
-            <label>RUT: <input type="text" name="rutAlumno" id="rutAlumno" data-tipo="rut" required></label>
-            <label>Fecha de Nacimiento: <input type="date" name="fechaNacimiento" required></label>
-            <label>Edad: <input type="number" name="edad" min="1" required></label>
-            <label>Sexo:
+            <div class="form-grid">
+            <label>Nombres:<span class="required">*</span><input type="text" name="nombres" id="nombres" required aria-required="true"></label>
+            <label>Apellido Paterno:<span class="required">*</span> <input type="text" name="apellidoPaterno" id="apellidoPaterno" required></label>
+            <label>Apellido Materno:<span class="required">*</span> <input type="text" name="apellidoMaterno" id="apellidoMaterno" required></label>
+            <label>RUT:<span class="required">*</span> <input type="text" name="rutAlumno" id="rutAlumno" data-tipo="rut" required></label>
+            <label>Fecha de Nacimiento:<span class="required">*</span> <input type="date" name="fechaNacimiento" required></label>
+            <label>Edad:<span class="required">*</span> <input type="number" name="edad" min="1" required></label>
+            <label>Sexo:<span class="required">*</span>
                 <select name="sexo" required>
                     <option value="" selected disabled>Seleccione una opción...</option>
                     <option value="M">Masculino</option>
                     <option value="F">Femenino</option>
                 </select>
             </label>
-            <label>Nacionalidad: <select name="nacionalidad" onchange="mostrarNac(this)" required>
+            <label>Nacionalidad:<span class="required">*</span> <select name="nacionalidad" onchange="mostrarNac(this)" required>
                 <option value="" selected disabled>Seleccione nacionalidad...</option>
                 <option value="Chileno/a">Chileno/a</option>
                 <option value="Argentino/a">Argentino/a</option>
@@ -67,8 +73,8 @@
                     <input type="text" id="otraNacionalidad" name="otra_nacionalidad" placeholder="Ingrese su nacionalidad">
                 </div>
             </label>
-            <label>Domicilio (calle o avenida): <input type="text" name="domicilio" required></label>
-            <label>Comuna: <select name="comuna" required>
+            <label>Domicilio (calle o avenida):<span class="required">*</span> <input type="text" name="domicilio" required></label>
+            <label>Comuna:<span class="required">*</span> <select name="comuna" required>
                 <option value="" selected disabled>Seleccione una Comuna...</option>
                 <option value="Codegua">Codegua</option>
                 <option value="Coinco">Coinco</option>
@@ -104,23 +110,23 @@
                 <option value="San Fernando">San Fernando</option>
                 <option value="Santa Cruz">Santa Cruz</option>
             </select></label>
-            <label>Región: <input type="text" name="region" required></label>
-            <label>Vive con: <input type="text" name="viveCon" required></label>
-            <label>¿Pertenece a algún programa social?: <input type="text" name="programaSocial"></label>
-            <label>¿Pertenece a alguna etnia?: <input type="text" name="etnia"></label>
-            <label>¿Ha repetido algún curso?: <input type="text" name="repeticion"></label>
-            <label>¿Opta a clase de religión?: <input type="text" name="religion"></label>
-            <label>Colegio de procedencia: <input type="text" name="colegioProcedencia"></label>
-            <label>Alumno con SAE: <input type="checkbox" name="conSAE"></label>
-            <label>Alumno sin SAE: <input type="checkbox" name="sinSAE"></label>
-            <label>Antiguo en el colegio: <input type="checkbox" name="alumnoAntiguo"></label>
+            <label>Región:<span class="required">*</span> <input type="text" name="region" required></label>
+            <label>Vive con:<span class="required">*</span> <input type="text" name="viveCon" required></label>
+            <label>¿Pertenece a algún programa social?:<span class="required">*</span> <input type="text" name="programaSocial"></label>
+            <label>¿Pertenece a alguna etnia?:<span class="required">*</span> <input type="text" name="etnia"></label>
+            <label>¿Ha repetido algún curso?:<span class="required">*</span> <input type="text" name="repeticion"></label>
+            <label>¿Opta a clase de religión?:<span class="required">*</span> <input type="text" name="religion"></label>
+            <label>Colegio de procedencia:<span class="required">*</span> <input type="text" name="colegioProcedencia"></label>
+            <label>Alumno con SAE:<span class="required">*</span> <input type="checkbox" name="conSAE"></label>
+            <label>Alumno sin SAE:<span class="required">*</span> <input type="checkbox" name="sinSAE"></label>
+            <label>Antiguo en el colegio:<span class="required">*</span> <input type="checkbox" name="alumnoAntiguo"></label>
             </div>
         </section>
 
         <!-- 2. Datos del Apoderado -->
         <section>
-            <div class="form-grid">
             <h2>2. Datos del Apoderado</h2>
+            <div class="form-grid">
             <label>Nombre Completo: <input type="text" name="nombreApoderado" id="nombreApoderado" required></label>
             <label>RUT: <input type="text" name="rutApoderado" id="rutApoderado" data-tipo="rut" required></label>
             <label>Fecha de nacimiento: <input type="date" name="fechaNacApoderado" required></label>
@@ -135,8 +141,8 @@
 
         <!-- 3. Datos de los Padres -->
         <section>
-            <div class="form-grid">
             <h2>3. Datos de los Padres</h2>
+            <div class="form-grid">
             <label>Nombre del Padre: <input type="text" name="nombrePadre"></label>
             <label>RUT del Padre: <input type="text" name="rutPadre" data-tipo="rut"></label>
             <label>Fecha de Nacimiento: <input type="date" name="fechaNacPadre"></label>
@@ -151,8 +157,8 @@
 
         <!-- 4. Salud del Alumno -->
         <section>
-            <div class="form-grid">
             <h2>4. Salud del Alumno</h2>
+            <div class="form-grid">
             <label>¿Ha estado en tratamiento médico?: <input type="text" name="tratamientoMedico"></label>
             <label>¿Posee antecedentes de trastornos de aprendizaje u otros?: <input type="text" name="trastornos"></label>
             <label>¿Es alérgico a medicamentos o alimentos?: <input type="text" name="alergias"></label>
@@ -164,16 +170,16 @@
 
         <!-- 5. Transporte Escolar -->
         <section>
-            <div class="form-grid">
             <h2>5. Transporte Escolar</h2>
+            <div class="form-grid">
             <label>¿Necesita movilización?: <input type="text" name="movilizacion"></label>
             </div>
         </section>
 
         <!-- 6. Apoderado Suplente -->
         <section>
-            <div class="form-grid">
             <h2>6. Apoderado Suplente</h2>
+            <div class="form-grid">
             <label>Nombre Completo: <input type="text" name="nombreSuplente"></label>
             <label>RUT: <input type="text" name="rutSuplente" data-tipo="rut"></label>
             <label>Parentesco: <input type="text" name="parentescoSuplente"></label>
