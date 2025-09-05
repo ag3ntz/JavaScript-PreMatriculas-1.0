@@ -16,7 +16,7 @@
     </p>
     <form id="formPrematricula">
         <div class="form-grid">
-        <label for="curso">Selecciona un curso a prematricular:<span class="required">*</span></label>
+        <label>Selecciona un curso a prematricular:<span class="required">*</span></label>
         <select name="cursoMatricula" id="curso" required>
             <option value="" selected disabled>Seleccione un curso...</option>
             <option value="Pre-Kinder">PreKinder</option>
@@ -119,17 +119,12 @@
             <label>¿Ha repetido algún curso?:<span class="required">*</span> <input type="text" name="repeticion"></label>
             <label>¿Opta a clase de religión?:<span class="required">*</span> <input type="text" name="religion"></label>
             <label>Colegio de procedencia:<span class="required">*</span> <input type="text" name="colegioProcedencia"></label>
-            <fieldset>
-                <legend>Alumno cuenta con:<span class="required">*</span> </legend>
-                <div class="radio-group">
-                    <label><input type="radio" name="tipoAlumno" value="con SAE" required>Con SAE</label>
-                    <label><input type="radio" name="tipoAlumno" value="sin SAE" required>Sin SAE </label>
-                    <label><input type="radio" name="tipoAlumno" value="Alumno Antiguo">Alumno Antiguo </label>
-                </div>
-            </fieldset>
-<!--            <label>Alumno con SAE:<span class="required">*</span> <input type="checkbox" name="conSAE"></label>-->
-<!--            <label>Alumno sin SAE:<span class="required">*</span> <input type="checkbox" name="sinSAE"></label>-->
-<!--            <label>Antiguo en el colegio:<span class="required">*</span> <input type="checkbox" name="alumnoAntiguo"></label>-->
+            <label>Alumno cuenta con: <span class="required">*</span> <select name="SAE" id="alumnoSae">
+                <option value="" selected disabled>Elija una opción...</option>
+                <option value="con SAE">Con SAE</option>
+                <option value="sin SAE">Sin SAE</option>
+                <option value="Alumno antiguo">Alumno antiguo</option>
+            </select></label>
             </div>
         </section>
 
@@ -153,12 +148,12 @@
         <section>
             <h2>3. Datos de los Padres</h2>
             <div class="form-grid">
-            <label>Nombre del Padre: <input type="text" name="nombrePadre"></label>
+            <label>Nombre del Padre: <input type="text" name="nombrePadre" id="nombrePadre"></label>
             <label>RUT del Padre: <input type="text" name="rutPadre" data-tipo="rut"></label>
             <label>Fecha de Nacimiento: <input type="date" name="fechaNacPadre"></label>
             <label>Profesión u Oficio: <input type="text" name="profesionPadre"></label>
 
-            <label>Nombre de la Madre: <input type="text" name="nombreMadre"></label>
+            <label>Nombre de la Madre: <input type="text" name="nombreMadre" id="nombreMadre"></label>
             <label>RUT de la Madre: <input type="text" name="rutMadre" data-tipo="rut"></label>
             <label>Fecha de Nacimiento: <input type="date" name="fechaNacMadre"></label>
             <label>Profesión u Oficio: <input type="text" name="profesionMadre"></label>
