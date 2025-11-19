@@ -61,8 +61,8 @@
                         </select>
                     </label>
                     <label for="nacionalidad">Nacionalidad:<span class="required">*</span> <select name="nacionalidad"
-                            onchange="mostrarNac(this)" required>
-                            <option value="" selected id="nacionalidad" name="nacionalidad" disabled>Seleccione
+                            id="nacionalidad" required>
+                            <option value="" selected name="nacionalidad" disabled>Seleccione
                                 nacionalidad...</option>
                             <option value="Chileno/a">Chileno/a</option>
                             <option value="Argentino/a">Argentino/a</option>
@@ -79,7 +79,7 @@
                             <option value="Haitiano/a">Haitiano/a</option>
                             <option value="Otro">Otra(especificar)</option>
                         </select>
-                        <div class="otraNacionalidadContainer" style="display: none; margin-top: 10px;">
+                        <div id="otraNacionalidadContainer" style="display: none; margin-top: 10px;">
                             <label for="otraNacionalidad"> Especifique nacionalidad</label>
                             <input type="text" id="otraNacionalidad" name="otraNacionalidad"
                                 placeholder="Ingrese su nacionalidad">
