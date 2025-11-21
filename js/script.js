@@ -74,3 +74,29 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const fechaNacInput = document.querySelector('input[name="fechaNacimiento"]');
+    const edadInput = document.querySelector('input[name="edad"]');
+
+    if (fechaNacInput && edadInput) {
+        fechaNacInput.addEventListener("change", () => {
+            const fechaNac = new Date(fechaNacInput.value);
+            const hoy = new Date();
+
+            if (isNaN(fechaNac.getTime())) {
+                edadInput.value = "";
+                return;
+            }
+
+            let edad = hoy.getFullYear() - fechaNac.getFullYear();
+            const mes = hoy.getMonth() - fechaNac.getMonth();
+
+            if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) {
+                edad--;
+            }
+
+            edadInput.value = edad >= 0 ? edad : 0;
+        });
+    }
+});

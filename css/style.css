@@ -188,3 +188,10 @@ button:hover {
         padding: 15px;
     }
 }
+
+#logo {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto 20px;
+    height: auto;
+}

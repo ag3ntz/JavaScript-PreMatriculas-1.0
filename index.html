@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>.:LSJ:.Ficha de PreMatrícula 2026</title>
+    <title>.:LSJ:. Ficha Prematricula 2026</title>
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
     <main class="container">
+        <img id="logo" src="assets/img/picture3_new2.png" />
         <h1>Ficha de Pre Matrícula - Año 2026</h1>
         <h3>Liceo San José del Carmen</h3>
         <p class="intro">
@@ -41,14 +42,14 @@
             <section>
                 <h2>1. Datos del Alumno</h2>
                 <div class="form-grid">
+                    <label>RUT (Alumno):<span class="required">*</span> <input type="text" name="rutAlumno"
+                            id="rutAlumno" data-tipo="rut" placeholder="Ej. 12.345.678-9" required></label>
                     <label>Nombres:<span class="required">*</span><input type="text" name="nombres" id="nombres"
-                            required aria-required="true"></label>
+                            placeholder="Ej. Juan Pedro" required aria-required="true"></label>
                     <label>Apellido Paterno:<span class="required">*</span> <input type="text" name="apellidoPaterno"
-                            id="apellidoPaterno" required></label>
+                            id="apellidoPaterno" placeholder="Ej. Pérez" required></label>
                     <label>Apellido Materno:<span class="required">*</span> <input type="text" name="apellidoMaterno"
-                            id="apellidoMaterno" required></label>
-                    <label>RUT:<span class="required">*</span> <input type="text" name="rutAlumno" id="rutAlumno"
-                            data-tipo="rut" required></label>
+                            id="apellidoMaterno" placeholder="Ej. Rodríguez" required></label>
                     <label>Fecha de Nacimiento:<span class="required">*</span> <input type="date" name="fechaNacimiento"
                             required></label>
                     <label>Edad:<span class="required">*</span> <input type="number" name="edad" min="1"
@@ -64,19 +65,19 @@
                             id="nacionalidad" required>
                             <option value="" selected name="nacionalidad" disabled>Seleccione
                                 nacionalidad...</option>
-                            <option value="Chileno/a">Chileno/a</option>
-                            <option value="Argentino/a">Argentino/a</option>
-                            <option value="Boliviano/a">Boliviano/a</option>
-                            <option value="Brasileño/a">Brasileño/a</option>
-                            <option value="Colombiano/a">Colombiano/a</option>
-                            <option value="Ecuatoriano/a">Ecuatoriano/a</option>
-                            <option value="Paraguayo/a">Paraguayo/a</option>
-                            <option value="Peruano/a">Peruano/a</option>
-                            <option value="Uruguayo/a">Uruguayo/a</option>
-                            <option value="Venezolano/a">Venezolano/a</option>
-                            <option value="Costarisence">Costarisence</option>
-                            <option value="Salvadoreño/a">Salvadoreño/a</option>
-                            <option value="Haitiano/a">Haitiano/a</option>
+                            <option value="Chile">Chile</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Brasil">Brasil</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Peru">Peru</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Venezuela">Venezuela</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="Haiti">Haiti</option>
                             <option value="Otro">Otra(especificar)</option>
                         </select>
                         <div id="otraNacionalidadContainer" style="display: none; margin-top: 10px;">
@@ -208,7 +209,7 @@
             <section>
                 <h2>6. Apoderado Suplente</h2>
                 <div class="form-grid">
-                    <label>Nombre Completo: <input type="text" name="nombreSuplente"></label>
+                    <label>Nombre Completo: <input type="text" id="nombreSuplente" name="nombreSuplente"></label>
                     <label>RUT: <input type="text" name="rutSuplente" data-tipo="rut"></label>
                     <label>Parentesco: <input type="text" name="parentescoSuplente"></label>
                 </div>
